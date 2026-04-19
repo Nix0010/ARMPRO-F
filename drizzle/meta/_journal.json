@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1775283652339,
+      "tag": "0000_remarkable_madrox",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1775283933207,
+      "tag": "0001_graceful_colonel_america",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1776079800000,
+      "tag": "0002_calm_stature",
+      "breakpoints": true
+    }
+  ]
+}

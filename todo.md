@@ -1,0 +1,29 @@
+# ArmPro Ultra - TODO
+
+- [x] Database schema design (users, exercises, routines, workouts, progress, achievements, chat, calendar, marketplace)
+- [x] Database migrations applied
+- [x] Dark premium theme with red/gold accents and glassmorphism
+- [x] Google Fonts integration (Inter + Bebas Neue)
+- [x] DashboardLayout with sidebar navigation and role-based filtering
+- [x] Authentication multi-role (athlete, coach, admin) with granular permissions
+- [x] Athlete Dashboard with real-time metrics, AI recommendations, quick actions
+- [x] Coach Dashboard with athlete management, routine creation, analytics
+- [x] Admin Dashboard with user management, system stats, content moderation, role management
+- [x] Exercise Library with categories, difficulty filters, detailed instructions
+- [x] Routine Builder with manual creation and AI-powered suggestions
+- [x] Interactive Workout Mode with timers, per-set tracking, weight logging, PR detection
+- [x] Configurable rest timer (30s/60s/90s/120s/180s) with skip and adjust
+- [x] Advanced Progress tracking with interactive charts, trends, date range selector
+- [x] Gamification system with XP, levels, achievements, streaks, weekly challenges
+- [x] Leaderboard global ranking
+- [x] AI Coach Chat with personalized responses, suggested prompts, and context-aware suggestions
+- [x] Smart Training Calendar with auto-planning, reminders, adherence analysis
+- [x] Marketplace for premium programs with filters, previews, reviews
+- [x] Profile page with avatar, country, stats, achievements, settings
+- [x] Settings page with preferences and notifications
+- [x] Notifications with mark all read, badge count in sidebar
+- [x] Role-based sidebar menu (coach/admin see additional items)
+- [x] 404 page with dark theme consistency
+- [x] Backend tRPC procedures for all features
+- [x] AI integration for coaching and routine generation
+- [x] Vitest tests for core procedures
