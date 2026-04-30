@@ -1,88 +1,106 @@
-# ARMPRO 🦾
-**Plataforma Integral de Entrenamiento de Armwrestling**
+# ARMPRO-F
 
-ARMPRO es una aplicación full-stack moderna diseñada para llevar el entrenamiento de armwrestling (lucha de brazos) al siguiente nivel. Ofrece herramientas avanzadas como un Coach impulsado por IA, gestión de rutinas personalizadas, gamificación y un marketplace integrado.
+Plataforma full-stack para entrenamiento de armwrestling. El proyecto combina una interfaz web moderna, backend en Node.js, base de datos MySQL y modulos pensados para rutinas, seguimiento, comunidad y asistencia con IA.
 
-## 🚀 Características Principales (Features)
-- **AI Coach**: Asistente inteligente que analiza tu progreso y sugiere mejoras en tus técnicas.
-- **Rutinas de Entrenamiento**: Creación, seguimiento y optimización de rutinas específicas para armwrestling.
-- **Gamificación**: Sistema de logros, niveles y recompensas para mantener la motivación.
-- **Marketplace**: Espacio para adquirir rutinas premium, equipos o sesiones de coaching.
-- **Calendario y Notificaciones**: Gestión de sesiones de entrenamiento y recordatorios en tiempo real.
+> Proyecto de portafolio desarrollado por Leyder Alvarez / NetFlow para demostrar construccion de aplicaciones web completas, modulares y orientadas a una comunidad especifica.
 
-## 🛠️ Stack Tecnológico
-- **Frontend**: React 19, TypeScript, Tailwind CSS, Radix UI, Framer Motion
-- **Estado y Fetching**: TanStack Query (React Query), tRPC
-- **Backend**: Node.js, Express, TypeScript, tRPC Server
-- **Base de Datos**: MySQL
-- **ORM**: Drizzle ORM
-- **Otros**: Pino (Logging), Zod (Validación), JWT (Autenticación)
+## Resumen
 
-## 📁 Estructura del Proyecto
-El proyecto sigue una arquitectura modular y orientada a dominios:
+ARMPRO-F busca digitalizar la experiencia de entrenamiento de armwrestling: rutinas, progreso, recomendaciones, contenido y herramientas de gestion desde una sola plataforma. Su arquitectura permite separar frontend, backend, modulos de negocio y esquemas compartidos.
+
+## Funcionalidades principales
+
+- Panel web para usuarios y experiencia responsive.
+- Modulos de entrenamiento y rutinas.
+- Base para coach con IA y recomendaciones.
+- Gamificacion con niveles, logros o progreso.
+- Marketplace o seccion comercial para rutinas, productos o sesiones.
+- Autenticacion y seguridad con JWT.
+- API tipada con tRPC.
+- Esquemas compartidos con Zod.
+- Persistencia con MySQL y Drizzle ORM.
+
+## Stack tecnologico
+
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=111)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=fff)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite&logoColor=fff)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=fff)
+![Express](https://img.shields.io/badge/Express-API-000000?logo=express&logoColor=fff)
+![tRPC](https://img.shields.io/badge/tRPC-Typed_API-2596BE?logo=trpc&logoColor=fff)
+![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?logo=mysql&logoColor=fff)
+![Drizzle](https://img.shields.io/badge/Drizzle-ORM-C5F74F)
+
+## Arquitectura
+
 ```text
-/
-├── client/           # Aplicación Frontend (React + Vite)
-├── server/           # Aplicación Backend (Node.js + Express + tRPC)
-│   ├── modules/      # Lógica de negocio modularizada (aiCoach, routine, etc.)
-│   └── _core/        # Configuraciones centrales del servidor
-├── shared/           # Tipos, esquemas y utilidades compartidas (Zod)
-└── drizzle/          # Esquemas de base de datos y migraciones
+ARMPRO-F/
+|-- client/    Aplicacion frontend React + Vite
+|-- server/    Backend Node.js + Express + tRPC
+|-- shared/    Tipos, validaciones y contratos compartidos
+|-- drizzle/   Esquemas y migraciones de base de datos
 ```
 
-## ⚙️ Requisitos Previos
-- [Node.js](https://nodejs.org/) (v18 o superior)
-- [pnpm](https://pnpm.io/) (Recomendado como gestor de paquetes)
-- [MySQL](https://www.mysql.com/) (Servidor de base de datos en ejecución)
+## Valor como proyecto
 
-## 💻 Instalación y Ejecución Local
+Este repositorio muestra capacidades clave para proyectos reales de negocio:
 
-1. **Clonar el repositorio**
-   ```bash
-   git clone https://github.com/TU_USUARIO/ARMPRO-F.git
-   cd ARMPRO-F
-   ```
+- Construccion de interfaces modernas y mantenibles.
+- Backend modular con APIs tipadas.
+- Modelado de datos y migraciones.
+- Integracion de autenticacion, seguridad y validacion.
+- Base para funcionalidades con IA y productos digitales.
 
-2. **Instalar dependencias**
-   ```bash
-   pnpm install
-   ```
+## Instalacion local
 
-3. **Configurar variables de entorno**
-   Crea un archivo `.env` en la raíz del proyecto. Asegúrate de **NUNCA** subir este archivo al repositorio.
-   ```env
-   # Base de datos
-   DATABASE_URL=mysql://usuario:contraseña@localhost:3306/armpro_db
-   
-   # Autenticación y Secretos
-   JWT_SECRET=tu_secreto_super_seguro
-   
-   # Entorno
-   NODE_ENV=development
-   ```
+### Requisitos
 
-4. **Preparar la Base de Datos**
-   ```bash
-   # Generar y aplicar migraciones con Drizzle
-   pnpm run db:push
-   ```
+- Node.js 18+
+- pnpm
+- MySQL
 
-5. **Ejecutar en modo desarrollo**
-   ```bash
-   pnpm run dev
-   ```
-   El cliente y el servidor se iniciarán concurrentemente.
+### Configuracion
 
-## 📜 Scripts Disponibles
-- `pnpm run dev`: Inicia el servidor y cliente en modo desarrollo.
-- `pnpm run build`: Construye el proyecto para producción (Vite build + esbuild).
-- `pnpm run start`: Inicia el servidor en producción utilizando los archivos compilados.
-- `pnpm run db:push`: Sincroniza el esquema de Drizzle con la base de datos MySQL.
-- `pnpm run check`: Ejecuta la validación de tipos de TypeScript.
-- `pnpm run test`: Ejecuta las pruebas unitarias con Vitest.
+```bash
+git clone https://github.com/Nix0010/ARMPRO-F.git
+cd ARMPRO-F
+pnpm install
+```
 
-## 🛡️ Licencia
-Este proyecto está bajo la Licencia [MIT](LICENSE).
+Crear archivo `.env`:
 
----
-*Desarrollado para la comunidad de Armwrestling.*
+```env
+DATABASE_URL=mysql://usuario:password@localhost:3306/armpro_db
+JWT_SECRET=tu_secreto_seguro
+NODE_ENV=development
+```
+
+Preparar base de datos:
+
+```bash
+pnpm run db:push
+```
+
+Ejecutar proyecto:
+
+```bash
+pnpm run dev
+```
+
+## Scripts
+
+```bash
+pnpm run dev      # Desarrollo
+pnpm run build    # Build de produccion
+pnpm run start    # Iniciar build
+pnpm run check    # Validacion TypeScript
+pnpm run test     # Pruebas con Vitest
+pnpm run db:push  # Migraciones Drizzle
+```
+
+## Autor
+
+**Leyder Alvarez**  
+Desarrollador web y automatizaciones bajo la marca **NetFlow**.
+
+GitHub: [@Nix0010](https://github.com/Nix0010)
